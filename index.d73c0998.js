@@ -11,7 +11,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
           </div>
       </li>
        
-  `).join(""),console.log(e)}).catch(e=>{console.log(e)}),l.addEventListener("click",function(e){e.preventDefault();let t=e.target.closest(".popular-recepies-item").dataset.id;!function(e){fetch(`https://tasty-treats-backend.p.goit.global/api/recipes/${e}`).then(e=>e.json()).then(e=>{let{title:t,description:i,area:s,category:a,preview:l,rating:c,time:o,youtube:d,ingredients:{desc:p,id:u,measure:g,name:m},tags:v}=e;console.log(e),console.log(i),function({title:e,description:t,area:i,category:s,preview:a,rating:l,time:n,youtube:c,ingredients:{desc:o,id:d,measure:p,name:u},tags:g}){let m=document.createElement("div");m.classList.add("js-modal"),m.classList.add("is-active"),m.innerHTML=`
+  `).join(""),console.log(e)}).catch(e=>{console.log(e)}),l.addEventListener("click",function(e){e.preventDefault();let t=e.target.closest(".popular-recepies-item").dataset.id;!function(e){fetch(`https://tasty-treats-backend.p.goit.global/api/recipes/${e}`).then(e=>e.json()).then(e=>{let{title:t,description:i,area:s,category:a,preview:l,rating:o,time:c,youtube:d,ingredients:{desc:p,id:u,measure:g,name:m},tags:v}=e;console.log(e),console.log(i),function({title:e,description:t,area:i,category:s,thumb:a,instructions:l,preview:n,rating:o,time:c,youtube:d,ingredients:{desc:p,id:u,measure:g,name:m},tags:v}){let b=document.createElement("div");b.classList.add("js-modal"),b.classList.add("is-active"),b.innerHTML=`
       <div class="modal-bg">
         <div class="modal-body">
             <div class="modal-close">
@@ -19,31 +19,29 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
             </div>
             <div class="modal-content">
                 <h2 class="modal-recepi-title">${e}</h2>
-                <div class="recepi-video-wrap">
-                    <img src="${a}" alt="${e}">
+                <div class="recipe-video-content">
+                    <div class="recepi-video-wrap">
+                       <img src="${n}" alt="${e}" class="video-img"> 
+                    </div>
+                    <div class="youtube-btn">
+                        <a href="${d}" class="youtube-link" target="_blank" rel="noopener noreferrer nofollow">
+                            <svg class="youtube-icon" width="32" height="32">
+                                <use href="./img/sprite.svg#iicon-youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="recepi-tags-wrap">
-                    <ul class="recepi-tags-list list">
-                        <li class="recepi-tags-item">
-                            <button type="button" class="recepi-tags-btn">#Breakfast</button>
-                        </li>
-                        <li class="recepi-tags-item">
-                            <button type="button" class="recepi-tags-btn">#Desert</button>
-                        </li>
-                        <li class="recepi-tags-item">
-                            <button type="button" class="recepi-tags-btn">#Sweet</button>
-                        </li>
-                    </ul>
+                <div class="recepi-tags-wrap"> 
                     <div class="recepi-rating-wrap">
-                        <p class="recepi-rating-value">4.5</p>
                         <div class="rating-stars-wrap">
+                          <label for="" class="recepi-rating-value">${o}</label>
                             <input type="radio" class="rating-start-item" value="1">
                             <input type="radio" class="rating-start-item" value="2">
                             <input type="radio" class="rating-start-item" value="3">
                             <input type="radio" class="rating-start-item" value="4">
                             <input type="radio" class="rating-start-item" value="5">
                         </div>
-                        <p class="recepi-time-cook">${n} min</p>
+                        <p class="recepi-time-cook">${c} min</p>
                     </div>
                 </div>
                 <div class="recepi-ingredients-list list">
@@ -68,7 +66,18 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
                         <p class="ingredient-mesure">Pinch</p>
                     </li>
                 </div>
-                <p class="modal-recepi-description">${t}</p>
+                <ul class="recepi-tags-list list">
+                        <li class="recepi-tags-item">
+                            <button type="button" class="recepi-tags-btn">#Breakfast</button>
+                        </li>
+                        <li class="recepi-tags-item">
+                            <button type="button" class="recepi-tags-btn">#Desert</button>
+                        </li>
+                        <li class="recepi-tags-item">
+                            <button type="button" class="recepi-tags-btn">#Sweet</button>
+                        </li>
+                    </ul>
+                <p class="modal-recepi-description">${l}</p>
                 <div class="modal-recepi-buttons">
                     <button type="button" class="add-favorit">Add to favorite</button>
                     <button type="button" class="give-rating">Give rating</button>
@@ -76,5 +85,5 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
             </div>
         </div>
     </div>
-      `,document.body.appendChild(m);let v=m.querySelector(".modal-close-btn");v.addEventListener("click",r)}(e),n.classList.add("no-scroll")}).catch(e=>{console.log(e)})}(t)}),window.addEventListener("keydown",e=>{"Escape"===e.key&&r()}),window.addEventListener("click",e=>{(e.target.classList.contains("modal-close-btn")||e.target.classList.contains("modal-bg"))&&r()});
-//# sourceMappingURL=index.0efba32a.js.map
+      `,document.body.appendChild(b);let y=b.querySelector(".modal-close-btn");y.addEventListener("click",r)}(e),n.classList.add("no-scroll")}).catch(e=>{console.log(e)})}(t)}),window.addEventListener("keydown",e=>{"Escape"===e.key&&r()}),window.addEventListener("click",e=>{(e.target.classList.contains("modal-close-btn")||e.target.classList.contains("modal-bg"))&&r()});
+//# sourceMappingURL=index.d73c0998.js.map
