@@ -5,8 +5,8 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
               <img src="${e}" alt="${t}">
             </div>
             <div class="thomb-popular-info">
-              <h3 class="thomb-popular-title">${t}</h3>
-              <p class="popular-recepie-descr">${i}</p>
+              <h3 class="thomb-popular-title points-title">${t}</h3>
+              <p class="popular-recepie-descr points-desc">${i}</p>
             </div>
           </div>
       </li>
@@ -15,58 +15,63 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
       <div class="modal-bg">
         <div class="modal-body">
             <div class="modal-close">
-                <button type="button" class="modal-close-btn">X</button>
+                <button type="button" class="modal-close-btn">x
+                    <svg class="modal-close-icon" width="32" height="32">
+                        <use href="./img/recet-x.svg"></use>
+                     </svg>
+                </button>
             </div>
             <div class="modal-content">
-                <h2 class="modal-recepi-title">${e}</h2>
-                <div class="recipe-video-content">
-                    <div class="recepi-video-wrap">
-                       <img src="${n}" alt="${e}" class="video-img"> 
-                    </div>
-                    <div class="youtube-btn">
-                        <a href="${d}" class="youtube-link" target="_blank" rel="noopener noreferrer nofollow">
-                            <svg class="youtube-icon" width="32" height="32">
-                                <use href="./img/sprite.svg#iicon-youtube"></use>
-                            </svg>
-                        </a>
+                <div class="oder-modal-title">
+                    <h2 class="modal-recepi-title">${e}</h2>
+                    <div class="recipe-video-content">
+                        <div class="recepi-video-wrap">
+                        <img src="${n}" alt="${e}" class="video-img"> 
+                        </div>
+                        <div class="youtube-btn">
+                            <a href="${d}" class="youtube-link" target="_blank" rel="noopener noreferrer nofollow">
+                                <svg class="youtube-icon" width="32" height="32">
+                                    <use href="./img/youtube.svg"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="recepi-tags-wrap"> 
+                <div class="order"> 
                     <div class="recepi-rating-wrap">
                         <div class="rating-stars-wrap">
-                          <label for="" class="recepi-rating-value">${o}</label>
-                            <input type="radio" class="rating-start-item" value="1">
-                            <input type="radio" class="rating-start-item" value="2">
-                            <input type="radio" class="rating-start-item" value="3">
-                            <input type="radio" class="rating-start-item" value="4">
-                            <input type="radio" class="rating-start-item" value="5">
+                            <label for="" class="recepi-rating-value">${o}</label>
+                                <input type="radio" class="rating-start-item" value="1">
+                                <input type="radio" class="rating-start-item" value="2">
+                                <input type="radio" class="rating-start-item" value="3">
+                                <input type="radio" class="rating-start-item" value="4">
+                                <input type="radio" class="rating-start-item" value="5">
                         </div>
                         <p class="recepi-time-cook">${c} min</p>
                     </div>
-                </div>
-                <div class="recepi-ingredients-list list">
-                    <li class="recepi-ingredients-item">
-                        <p class="ingredient-name">Banana</p>
-                        <p class="ingredient-mesure">1 large</p>
-                    </li>
-                    <li class="recepi-ingredients-item">
-                        <p class="ingredient-name">Eggs</p>
-                        <p class="ingredient-mesure">2 medium</p>
-                    </li>
-                    <li class="recepi-ingredients-item">
-                        <p class="ingredient-name">Oil</p>
-                        <p class="ingredient-mesure">1 tsp</p>
-                    </li>
-                    <li class="recepi-ingredients-item">
-                        <p class="ingredient-name">Pecan nuts</p>
-                        <p class="ingredient-mesure">25 tsp</p>
-                    </li>
-                    <li class="recepi-ingredients-item">
-                        <p class="ingredient-name">Baking Powder</p>
-                        <p class="ingredient-mesure">Pinch</p>
-                    </li>
-                </div>
-                <ul class="recepi-tags-list list">
+                    <div class="recepi-ingredients-list list">
+                        <li class="recepi-ingredients-item">
+                            <p class="ingredient-name">Banana</p>
+                            <p class="ingredient-mesure">1 large</p>
+                        </li>
+                        <li class="recepi-ingredients-item">
+                            <p class="ingredient-name">Eggs</p>
+                            <p class="ingredient-mesure">2 medium</p>
+                        </li>
+                        <li class="recepi-ingredients-item">
+                            <p class="ingredient-name">Oil</p>
+                            <p class="ingredient-mesure">1 tsp</p>
+                        </li>
+                        <li class="recepi-ingredients-item">
+                            <p class="ingredient-name">Pecan nuts</p>
+                            <p class="ingredient-mesure">25 tsp</p>
+                        </li>
+                        <li class="recepi-ingredients-item">
+                            <p class="ingredient-name">Baking Powder</p>
+                            <p class="ingredient-mesure">Pinch</p>
+                        </li>
+                    </div>
+                    <ul class="recepi-tags-list list">
                         <li class="recepi-tags-item">
                             <button type="button" class="recepi-tags-btn">#Breakfast</button>
                         </li>
@@ -77,6 +82,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
                             <button type="button" class="recepi-tags-btn">#Sweet</button>
                         </li>
                     </ul>
+                </div>
                 <p class="modal-recepi-description">${l}</p>
                 <div class="modal-recepi-buttons">
                     <button type="button" class="add-favorit">Add to favorite</button>
@@ -86,4 +92,4 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
         </div>
     </div>
       `,document.body.appendChild(b);let y=b.querySelector(".modal-close-btn");y.addEventListener("click",r)}(e),n.classList.add("no-scroll")}).catch(e=>{console.log(e)})}(t)}),window.addEventListener("keydown",e=>{"Escape"===e.key&&r()}),window.addEventListener("click",e=>{(e.target.classList.contains("modal-close-btn")||e.target.classList.contains("modal-bg"))&&r()});
-//# sourceMappingURL=index.d73c0998.js.map
+//# sourceMappingURL=index.8f096777.js.map
