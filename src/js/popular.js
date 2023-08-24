@@ -13,7 +13,9 @@ async function getRecipes() {
         // console.log(response);
         return response.data;
     } catch (error) {
-        Notiflix.Notify.failure('Sorry, something went wrong. Plise try again later.');
+        Notiflix.Notify.failure(
+            'Sorry, something went wrong. Plise try again later.'
+        );
         console.log(error);
         throw error;
     }
@@ -83,7 +85,9 @@ function openModal(id) {
             body.classList.add('no-scroll');
         })
         .catch(error => {
-            Notiflix.Notify.failure('Sorry, there is no information about this recipe. Plise try another one.');
+            Notiflix.Notify.failure(
+                'Sorry, there is no information about this recipe. Plise try another one.'
+            );
             console.log(error);
         });
 }

@@ -56,11 +56,17 @@ function renewRecipes(page) {
                 totalCards++;
                 cardsArray.push(
                     `<li class="item-cards">
-                      <img class="card-img" data-recipe-id="${recipe._id}" src="${recipe.preview}"/>
-                      <button class="add-fav-btn" data-recipe-id="${recipe._id}">love</button>
+                      <img class="card-img" data-recipe-id="${
+                          recipe._id
+                      }" src="${recipe.preview}"/>
+                      <button class="add-fav-btn" data-recipe-id="${
+                          recipe._id
+                      }">love</button>
                       <span class="span-title">${recipe.title.toUpperCase()}</span>
                       <span class="span-descr">${recipe.description}</span>
-                      <button class="main-see-recipe" data-recipe-id="${recipe._id}">See recipe</button>
+                      <button class="main-see-recipe" data-recipe-id="${
+                          recipe._id
+                      }">See recipe</button>
                     </li>`
                 );
             }
@@ -101,7 +107,7 @@ function renewRecipes(page) {
         });
         favoriteCards.querySelectorAll('.main-see-recipe').forEach(button => {
             let modal = require('./js/modal-recipe');
-            button.addEventListener('click', (e) => {
+            button.addEventListener('click', e => {
                 console.log(e.target.dataset);
                 modal.default.open(e.target.dataset.recipeId);
             });
@@ -117,10 +123,10 @@ function renewRecipes(page) {
             favorPagin.innerHTML = '';
         }
         favCaptive.style.display = 'none';
-        document.querySelector('.favorites-tags').style.display='flex';
+        document.querySelector('.favorites-tags').style.display = 'flex';
     } else {
         favCaptive.style.display = 'flex';
-        document.querySelector('.favorites-tags').style.display='none';
+        document.querySelector('.favorites-tags').style.display = 'none';
     }
 }
 

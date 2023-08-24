@@ -256,7 +256,8 @@ main {
     margin-right: 8px;
     font-family: inter;
     border-color: #0505054d;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -281,7 +282,8 @@ main {
     width: 44px;
     height: 44px;
     margin-right: 8px;
-    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+        border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -294,7 +296,8 @@ main {
     width: 44px;
     height: 44px;
     margin-right: 8px;
-    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+        border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -307,7 +310,8 @@ main {
     width: 44px;
     height: 44px;
     margin-right: 8px;
-    transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transition:
+        border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
