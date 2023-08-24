@@ -80,6 +80,17 @@
     gap: 6px;
     flex-direction: row;
 }
+.modal-rating-number-recipe {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: 0;
+    padding-right: 5px;
+    color: var(--primary-input-title-color);
+}
+
 .rating-number-recipe {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -87,8 +98,10 @@
     font-size: 14px;
     line-height: 1.28;
     letter-spacing: 0;
-    color: var(--primary-input-title-color);
+    padding-right: 5px;
+    color: var(--rating-color);
 }
+
 .stars {
     display: flex;
     flex-direction: row;

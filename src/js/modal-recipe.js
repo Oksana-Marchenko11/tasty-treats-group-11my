@@ -29,7 +29,9 @@ function populateModalWithRecipe(recipe) {
     const recipeImage = modalRecipe.querySelector('.recipe-image');
     const recipeName = modalRecipe.querySelector('.selected-recipe-name');
     const tags = modalRecipe.querySelector('.tags');
-    const ratingNumber = modalRecipe.querySelector('.rating-number-recipe');
+    const ratingNumber = modalRecipe.querySelector(
+        '.modal-rating-number-recipe'
+    );
     const cookingTime = modalRecipe.querySelector('.cooking-time');
     const ingredientsList = modalRecipe.querySelector('.ingredients');
     const recipeWrap = modalRecipe.querySelector('.instruction-wrap');

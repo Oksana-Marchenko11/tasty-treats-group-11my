@@ -20,6 +20,7 @@
     --rating-stars-unactive-modal: rgba(5, 5, 5, 0.1);
     --unactive-btn-arrow: rgba(248, 248, 248, 0.5);
     --primary-switch-btn: #cecdcd;
+    --rating-color: #f8f8f8;
 
     --dark-bg-color: #161616;
     --dark-modal-bg: #050505;
@@ -59,12 +60,13 @@
     --primary-input-text-color: rgba(255, 255, 255, 0.3);
     --primary-input-border: rgba(255, 255, 255, 0.2);
     --primary-scroll-bar: rgba(255, 255, 255, 0.18);
-    --rating-stars-active: #3c3b3b;
+    --rating-stars-active: #eea10c;
     --rating-stars-unactive: #d9d9d9;
     --rating-stars-unactive-cards: rgba(255, 255, 255, 0.1);
     --rating-stars-unactive-modal: rgba(5, 5, 5, 0.1);
     --unactive-btn-arrow: rgba(248, 248, 248, 0.5);
     --primary-switch-btn: #cecdcd;
+    --rating-color: #ffffff80;
 
     --dark-bg-color: #161616;
     --dark-modal-bg: #050505;

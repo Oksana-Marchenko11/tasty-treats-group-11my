@@ -76,6 +76,10 @@ main {
     border-color: transparent;
 }
 
+.category-btn:hover {
+    color: var(--primary-brend);
+}
+
 .active-button {
     color: var(--primary-brend);
 }
@@ -385,9 +389,9 @@ main {
     inset: -9px;
     transform: translate(10px, 8px);
     z-index: 1;
-    background-image: linear-gradient(to top, #050505, transparent);
+    background-image: linear-gradient(to top, #000000, transparent);
     filter: blur(0px);
-    opacity: 60%;
+    opacity: 80%;
     border-radius: 8px;
     width: 320px;
     height: 320px;
@@ -411,9 +415,7 @@ main {
     position: absolute;
     bottom: 16px;
     left: 16px;
-}
-.rating-number-recipe {
-    color: rgba(248, 248, 248, 1);
+    z-index: 999;
 }
 
 /* MIN 320*************************************** */
