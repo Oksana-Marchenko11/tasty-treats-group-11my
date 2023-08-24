@@ -241,7 +241,12 @@ main {
 /* Пагінація****************************************************************** */
 .pagination {
     display: flex;
+    justify-content: center;
     margin: 0 auto;
+}
+
+.arrow {
+    /* margin-bottom: 5px; */
 }
 
 .main-pag-btn {
