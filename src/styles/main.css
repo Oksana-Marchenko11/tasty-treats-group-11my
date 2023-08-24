@@ -1,6 +1,28 @@
 @import './root.css';
 @import './popular.css';
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 12px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0505051a;
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #05050530; /* змініть на потрібний колір */
+}
+
+main {
+    margin-bottom: 70px;
+}
+
 /* Placing of main */
 .main-div {
     display: flex;
