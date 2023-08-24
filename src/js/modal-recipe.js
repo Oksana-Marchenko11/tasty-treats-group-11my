@@ -1,4 +1,3 @@
-
 import TestyApiService from './testyApiService';
 
 const testyApiService = new TestyApiService();
@@ -13,10 +12,10 @@ function open(recipeId) {
             let recipe;
             testyApiService.getRecipeById(recipeId).then(data => {
                 recipe = data;
-            console.log('Recipe Info:', recipe);
-            populateModalWithRecipe(recipe);
-            // Display the modal
-            showModalRecipe();
+                console.log('Recipe Info:', recipe);
+                populateModalWithRecipe(recipe);
+                // Display the modal
+                showModalRecipe();
             });
         } catch (error) {
             console.error('Error fetching recipe:', error);
@@ -107,6 +106,7 @@ ${ingredient.name}<span class="ingredient-amount">${ingredient.measure}</span>
     btnAddToFavorite.dataset.recipeId = recipe._id;
 
     btnAddToFavorite.addEventListener('click', function (e) {
+        console.log('Try to add to favorites');
         e.preventDefault();
         let favApi = require('./favorites-api').default;
         favApi.togleFav(e.target.dataset.recipeId);
