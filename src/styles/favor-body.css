@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 30px);
+    margin-top: 50px;
 }
 
 .fav-pic {
@@ -39,8 +39,13 @@
     display: flex;
     text-align: center;
     margin-top: 24px;
-    font-size: 14px;
-    line-height: 18px;
+    width: 481px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
 }
 
 .category-list-favorites {
