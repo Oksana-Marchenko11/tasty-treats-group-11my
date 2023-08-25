@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 import Notiflix from 'notiflix';
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
@@ -31,7 +31,9 @@ getRecipes()
 
 // Функція відмалювання популярних рецептів за данних отриманних з беку
 function createMarkupPopularRecepies(arr) {
-  return arr.map(({ preview, title, description, _id }) => `
+    return arr
+        .map(
+            ({ preview, title, description, _id }) => `
       <li class="popular-recepies-item" data-id="${_id}">
           <div class="thomb-popular-wrap">
             <div class="thomb-popular-img">
@@ -44,8 +46,9 @@ function createMarkupPopularRecepies(arr) {
           </div>
       </li>
        
-  `).join('');
-  
+  `
+        )
+        .join('');
 }
 
 // Вішаемо слухач подій на список популярних рецептів
@@ -54,56 +57,86 @@ popularRecepies.addEventListener('click', openModalOnClick);
 // Функція відкриття модалки по кліку на обраний популярний рецепт
 function openModalOnClick(evt) {
     evt.preventDefault();
-    
+
     const resepieID = evt.target.closest('.popular-recepies-item').dataset.id;
-    openModal(resepieID);   
+    openModal(resepieID);
 }
 function openModal(id) {
-  fetch(`https://tasty-treats-backend.p.goit.global/api/recipes/${id}`)
-    .then(response => response.json())
-    .then(recipe => {
-      // Отримуемо з бекенду рецепт за обраним ID
-      const { title, description, preview, rating, time, youtube, ingredients: { desc, id, measure, name }, tags } = recipe;
-      // console.log(recipe);
-      // console.log(description);
-     
-      createModalRecepieById(recipe);
-      const ingredientsList = document.querySelector('.recepi-ingredients-list');
-      const tagsList =document.querySelector('.recepi-tags-list');
-      ingredientsList.innerHTML = createIngredientsMarkup(recipe.ingredients);
-      tagsList.innerHTML = createTagsMarkup(recipe.tags);
-      body.classList.add('no-scroll');
-    })
-    .catch(error => {
-        Notiflix.Notify.failure(
-            'Sorry, there is no information about this recipe. Please try another one.'
-        );
-      console.log(error);
-    });
+    fetch(`https://tasty-treats-backend.p.goit.global/api/recipes/${id}`)
+        .then(response => response.json())
+        .then(recipe => {
+            // Отримуемо з бекенду рецепт за обраним ID
+            const {
+                title,
+                description,
+                preview,
+                rating,
+                time,
+                youtube,
+                ingredients: { desc, id, measure, name },
+                tags,
+            } = recipe;
+            // console.log(recipe);
+            // console.log(description);
+
+            createModalRecepieById(recipe);
+            const ingredientsList = document.querySelector(
+                '.recepi-ingredients-list'
+            );
+            const tagsList = document.querySelector('.recepi-tags-list');
+            ingredientsList.innerHTML = createIngredientsMarkup(
+                recipe.ingredients
+            );
+            tagsList.innerHTML = createTagsMarkup(recipe.tags);
+            body.classList.add('no-scroll');
+        })
+        .catch(error => {
+            Notiflix.Notify.failure(
+                'Sorry, there is no information about this recipe. Please try another one.'
+            );
+            console.log(error);
+        });
 }
 // Функція відмальовки списку ингридіентів
 function createIngredientsMarkup(arr) {
-  return arr.map(({ name, measure}) => `
+    return arr
+        .map(
+            ({ name, measure }) => `
   <li class="recepi-ingredients-item">
     <p class="ingredient-name">${name}</p>
     <p class="ingredient-mesure">${measure}</p>
   </li>
-  `).join('');
+  `
+        )
+        .join('');
 }
 // Функція відмальовки списку тегів
 function createTagsMarkup(arr) {
-  return arr.map((tag) => `
+    return arr
+        .map(
+            tag => `
       <li class="recepi-tags-item">
         <button type="button" class="recepi-tags-btn">#${tag}</button>
       </li>
-  `).join('');
+  `
+        )
+        .join('');
 }
 // Функція відмальовки модального вікна обраного рецепту
-function createModalRecepieById({ title, preview, instructions, rating, time, youtube, ingredients: { desc, id, measure, name }, tags }) {
-     const divModalBackdrop = document.createElement('div');
-      divModalBackdrop.classList.add('js-modal');
-      divModalBackdrop.classList.add('is-active');
-      divModalBackdrop.innerHTML = `
+function createModalRecepieById({
+    title,
+    preview,
+    instructions,
+    rating,
+    time,
+    youtube,
+    ingredients: { desc, id, measure, name },
+    tags,
+}) {
+    const divModalBackdrop = document.createElement('div');
+    divModalBackdrop.classList.add('js-modal');
+    divModalBackdrop.classList.add('is-active');
+    divModalBackdrop.innerHTML = `
       <div class="modal-bg">
       <div class="modal-body">
           <div class="modal-close">
@@ -165,61 +198,62 @@ function createModalRecepieById({ title, preview, instructions, rating, time, yo
       </div>
   </div>
       `;
-      document.body.appendChild(divModalBackdrop);     
-      //  Cтворення зіркового рейтингу
-// Зірковий рейтинг 
-const ratingValueEl = document.querySelector('.recepi-rating-value');
-const ratingActive = document.querySelector('.rating-active');
-const ratingElements = document.querySelector('.rating-items');
-const ratingValue = Number(ratingValueEl.textContent).toFixed(1);
-ratingValueEl.innerHTML = ratingValue;
-const ratingLength = ratingElements.childElementCount;
+    document.body.appendChild(divModalBackdrop);
+    //  Cтворення зіркового рейтингу
+    // Зірковий рейтинг
+    const ratingValueEl = document.querySelector('.recepi-rating-value');
+    const ratingActive = document.querySelector('.rating-active');
+    const ratingElements = document.querySelector('.rating-items');
+    const ratingValue = Number(ratingValueEl.textContent).toFixed(1);
+    ratingValueEl.innerHTML = ratingValue;
+    const ratingLength = ratingElements.childElementCount;
 
-function handleRating() {
-if(ratingValue > 0) {
-initRatings();
-}
-}
+    function handleRating() {
+        if (ratingValue > 0) {
+            initRatings();
+        }
+    }
 
-function initRatings(){
-for(let i = 0; i < ratingLength; i++) {
-setRatingActiveWidth(ratingValue);
-}
-}
+    function initRatings() {
+        for (let i = 0; i < ratingLength; i++) {
+            setRatingActiveWidth(ratingValue);
+        }
+    }
 
-// Знаходимо ширину заповнення щирини div з зірочками в процентному відношенні  ( 5 зірочок / 100 = 0.05)
-function setRatingActiveWidth() {
-const ratingActiveWidthAmount = ratingValue / 0.05;
-ratingActive.style.width = `${ratingActiveWidthAmount}%`; 
-// console.log( ratingActive.style.width);
-}
-handleRating();
-
+    // Знаходимо ширину заповнення щирини div з зірочками в процентному відношенні  ( 5 зірочок / 100 = 0.05)
+    function setRatingActiveWidth() {
+        const ratingActiveWidthAmount = ratingValue / 0.05;
+        ratingActive.style.width = `${ratingActiveWidthAmount}%`;
+        // console.log( ratingActive.style.width);
+    }
+    handleRating();
 
     //    Створюємо змінну кнопки для модалки і віщаємо обробку події закриття модалки
-      const modalCloseBtn = divModalBackdrop.querySelector('.modal-close-btn');
-      modalCloseBtn.addEventListener('click', closeModal);
+    const modalCloseBtn = divModalBackdrop.querySelector('.modal-close-btn');
+    modalCloseBtn.addEventListener('click', closeModal);
 }
 
 // Функція закриття модалки
 function closeModal() {
     const modal = document.querySelector('.js-modal.is-active');
     if (modal) {
-      modal.remove();
-      body.classList.remove('no-scroll');
+        modal.remove();
+        body.classList.remove('no-scroll');
     }
-  }
+}
 //   Закриття модалки по кнопкі Escape
-  window.addEventListener('keydown', (event) => {
+window.addEventListener('keydown', event => {
     if (event.key === 'Escape') {
-      closeModal();
+        closeModal();
     }
-  });
+});
 // Закриття модалки по кліку на область за модалкою
-  window.addEventListener('click', (event) => {
-    if (event.target.classList.contains('modal-close-btn') || event.target.classList.contains('modal-bg')) {
-      console.log()
+window.addEventListener('click', event => {
+    if (
+        event.target.classList.contains('modal-close-btn') ||
+        event.target.classList.contains('modal-bg')
+    ) {
+        console.log();
         closeModal(event.target.elements);
     }
 });
- 

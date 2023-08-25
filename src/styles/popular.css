@@ -248,7 +248,7 @@ body.no-scroll {
     margin-bottom: 16px;
     order: 2;
 }
-.video-oder{
+.video-oder {
     display: flex;
     flex-direction: column;
 }
@@ -334,7 +334,7 @@ body.no-scroll {
     top: 0;
     left: 0;
 }
-.rating-stars-item{
+.rating-stars-item {
     flex: 0 0 20%;
     height: 100%;
     opacity: 0;
@@ -368,7 +368,7 @@ body.no-scroll {
 .recepi-rating-value {
     margin-right: 6px;
 }
-.recepi-ingredients-wrap{
+.recepi-ingredients-wrap {
     margin-bottom: 40px;
 }
 .recepi-ingredients-item {
@@ -380,7 +380,6 @@ body.no-scroll {
 
 .recepi-ingredients-item:not(:last-child) {
     margin-bottom: 10px;
-   
 }
 .ingredient-name {
     color: var(--primary-title-color);
@@ -454,29 +453,28 @@ body.no-scroll {
         width: 531px;
         padding: 32px 32px;
     }
-    .modal-recepi-title{
+    .modal-recepi-title {
         order: 0;
     }
-    .recepi-rating{
+    .recepi-rating {
         margin-bottom: 0;
     }
-    .recipe-info-order{
+    .recipe-info-order {
         width: 467px;
         display: flex;
         flex-wrap: wrap-reverse;
         gap: 32px;
         align-items: center;
     }
-    .recepi-rating-wrap{
+    .recepi-rating-wrap {
         order: 1;
         margin-bottom: 0;
         width: 177px;
-     
     }
-    .recepi-tags-wrap{
+    .recepi-tags-wrap {
         width: 258px;
     }
-    .recepi-ingredients-wrap{
+    .recepi-ingredients-wrap {
         order: 0;
         margin-bottom: 32px;
     }

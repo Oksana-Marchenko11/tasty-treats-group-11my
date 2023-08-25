@@ -339,7 +339,7 @@ function pagination(page, total, container, callback) {
                 callback();
             });
         });
-    } else{
+    } else {
         container.innerHTML = '';
     }
 }
