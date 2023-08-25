@@ -36,6 +36,7 @@
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    color: var(--primary-brend);
 }
 .is-active-link {
     color: var(--primary-brend);
