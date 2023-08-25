@@ -13,6 +13,10 @@
     border-radius: 15px;
 }
 
+.icon-close {
+    stroke: var(--primary-title-color);
+}
+
 .modal-close-btn {
     width: 20px;
     height: 20px;
