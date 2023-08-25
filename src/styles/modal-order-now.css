@@ -39,6 +39,7 @@
     height: 46px;
     border: 1px solid var(--primary-input-border);
     background-color: inherit;
+    color: var(--primary-input-title-color);
     border-radius: 15px;
     padding: 8px 8px;
     margin: 0;
@@ -53,6 +54,7 @@ input {
     width: 100%;
     height: 100px;
     border: 1px solid var(--primary-input-border);
+    color: var(--primary-input-title-color);
     background-color: inherit;
     border-radius: 15px;
     padding: 8px 8px;
