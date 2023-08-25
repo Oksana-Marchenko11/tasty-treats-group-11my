@@ -35,7 +35,7 @@
     --dark-input-title-color: rgba(255, 255, 255, 0.5);
     --dark-input-text-color: rgba(255, 255, 255, 0.3);
     --dark-input-border: rgba(255, 255, 255, 0.2);
-    --dark-scroll-bar: rgba(255, 255, 255, 0.18);
+    --dark-scroll-bar: rgba(90, 90, 90, 0.1);
     --dark-rating-stars-unactive: #3c3b3b;
     --dark-rating-stars-unactive-cards: rgba(255, 255, 255, 0.1);
     --dark-switch-btn: linear-gradient(
@@ -82,7 +82,7 @@
     --dark-input-title-color: rgba(255, 255, 255, 0.5);
     --dark-input-text-color: rgba(255, 255, 255, 0.3);
     --dark-input-border: rgba(255, 255, 255, 0.2);
-    --dark-scroll-bar: rgba(255, 255, 255, 0.18);
+    --dark-scroll-bar: rgba(202, 202, 202, 0.18);
     --dark-rating-stars-unactive: #3c3b3b;
     --dark-rating-stars-unactive-cards: rgba(255, 255, 255, 0.1);
     --dark-switch-btn: linear-gradient(

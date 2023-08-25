@@ -41,6 +41,7 @@
     width: 111px;
     height: 37px;
     color: var(--primary-title-color);
+    background-color: inherit;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;

@@ -11,12 +11,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0505051a;
+    background-color: var(--primary-scroll-bar);
     border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #05050530; /* змініть на потрібний колір */
+    background-color: var(--dark-scroll-bar); /* змініть на потрібний колір */
 }
 
 main {
@@ -42,8 +42,8 @@ main {
 /* START********************************************************************************* */
 /* Категорії */
 .all-category-btn {
-    color: rgba(5, 5, 5, 0.5);
-    border: 1px solid rgba(5, 5, 5, 0.5);
+    color: var(--primary-input-title-color);
+    border: 1px solid var(--primary-input-border);
     width: 176px;
     height: 50px;
     padding: 14px 29px;
@@ -71,7 +71,7 @@ main {
 }
 
 .category-btn {
-    color: rgba(5, 5, 5, 0.5);
+    color: var(--primary-input-title-color);
     background-color: transparent;
     border-color: transparent;
 }
@@ -95,8 +95,8 @@ main {
 }
 
 .filter-item {
-    color: rgba(5, 5, 5, 0.5);
-    border: 1px solid rgba(5, 5, 5, 0.5);
+    color: var(--primary-input-title-color);
+    border: 1px solid var(--primary-input-border);
     border-radius: 15px;
     gap: 40px;
     padding: 14px 18px;
@@ -200,7 +200,7 @@ main {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.17;
-    color: rgba(5, 5, 5, 0.5);
+    color: var(--primary-input-title-color);
     margin-top: 14px;
 }
 
