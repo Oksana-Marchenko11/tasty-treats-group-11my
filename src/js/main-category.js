@@ -193,7 +193,7 @@ function renewRecipes() {
 
             const li = document.createElement('li');
             li.className = 'item-cards';
-            li.innerHTML = `    
+            li.innerHTML = `
                 <div class="shadow-on-img" data-recipe-id="${recipe._id}">
                     <img class="card-img" src="${recipe.preview}" />
                 </div>
