@@ -284,13 +284,12 @@ Q();const G=`
         13.443 18.9954 11.5137C20.7987 9.19323 20.5149 5.89221 18.1791 3.95085C15.8434
         2.00948 12.8266 2.5652 10.9939 4.70783Z" stroke="#F8F8F8" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round"/>
-</svg>`;function Q(){window.innerWidth<768?P.setPerPage(6):window.innerWidth<1280?P.setPerPage(8):P.setPerPage(9);let e=(0,o.default).getLs();P.getRecipes().then(t=>{A.innerHTML="",t.results.forEach(t=>{let n=t._id in e?"favorite":"unfavorite",i=document.createElement("li");i.className="item-cards",i.innerHTML=`
+</svg>`;function Q(){window.innerWidth<768?P.setPerPage(6):window.innerWidth<1280?P.setPerPage(8):P.setPerPage(9);let e=(0,o.default).getLs();P.getRecipes().then(t=>{A.innerHTML="",t.results.forEach(t=>{let n=t._id in e?K:G,i=document.createElement("li");i.className="item-cards",i.innerHTML=`
                 <div class="shadow-on-img" data-recipe-id="${t._id}">
                     <img class="card-img" src="${t.preview}" />
                 </div>
-                <button class="add-fav-btn ${n}"
-                        data-recipe-id="${t._id}">
-                    ${G}
+                <button class="add-fav-btn" data-recipe-id="${t._id}">
+                    ${n}
                 </button>
                 <span class="span-title" data-recipe-id="${t._id}">
                     ${t.title.toUpperCase()}
@@ -363,6 +362,6 @@ n.innerHTML+=`
                     <path d="M20.4001 12.7103C20.4939 12.6173 20.5683 12.5067 20.619 12.3848C20.6698 12.263 20.6959 12.1323 20.6959 12.0003C20.6959 11.8682 20.6698 11.7375 20.619 11.6157C20.5683 11.4938 20.4939 11.3832 20.4001 11.2903L15.8101 6.71025C15.7164 6.61728 15.642 6.50668 15.5912 6.38482C15.5405 6.26296 15.5143 6.13226 15.5143 6.00024C15.5143 5.86823 15.5405 5.73753 15.5912 5.61567C15.642 5.49381 15.7164 5.38321 15.8101 5.29024C15.9975 5.10399 16.251 4.99945 16.5151 4.99945C16.7793 4.99945 17.0328 5.10399 17.2201 5.29024L21.8101 9.88025C22.3719 10.4428 22.6875 11.2053 22.6875 12.0003C22.6875 12.7953 22.3719 13.5578 21.8101 14.1203L17.2201 18.7103C17.0339 18.895 16.7825 18.9992 16.5201 19.0003C16.3885 19.001 16.2581 18.9758 16.1362 18.926C16.0144 18.8763 15.9036 18.8029 15.8101 18.7103C15.7164 18.6173 15.642 18.5067 15.5912 18.3848C15.5405 18.263 15.5143 18.1323 15.5143 18.0003C15.5143 17.8683 15.5405 17.7375 15.5912 17.6157C15.642 17.4938 15.7164 17.3832 15.8101 17.2903L20.4001 12.7103Z" fill="#050505"/>
                     <path d="M13.4001 12.7103C13.4939 12.6173 13.5683 12.5067 13.619 12.3848C13.6698 12.263 13.6959 12.1323 13.6959 12.0003C13.6959 11.8682 13.6698 11.7375 13.619 11.6157C13.5683 11.4938 13.4939 11.3832 13.4001 11.2903L8.81014 6.71025C8.71641 6.61728 8.64202 6.50668 8.59125 6.38482C8.54048 6.26296 8.51434 6.13226 8.51434 6.00024C8.51434 5.86823 8.54048 5.73753 8.59125 5.61567C8.64202 5.49381 8.71641 5.38321 8.81014 5.29024C8.9975 5.10399 9.25095 4.99945 9.51514 4.99945C9.77933 4.99945 10.0328 5.10399 10.2201 5.29024L14.8101 9.88025C15.3719 10.4428 15.6875 11.2053 15.6875 12.0003C15.6875 12.7953 15.3719 13.5578 14.8101 14.1203L10.2201 18.7103C10.0339 18.895 9.78248 18.9992 9.52014 19.0003C9.38853 19.001 9.25807 18.9758 9.13623 18.926C9.0144 18.8763 8.90358 18.8029 8.81014 18.7103C8.71641 18.6173 8.64202 18.5067 8.59125 18.3848C8.54048 18.263 8.51434 18.1323 8.51434 18.0003C8.51434 17.8683 8.54048 17.7375 8.59125 17.6157C8.64202 17.4938 8.71641 17.3832 8.81014 17.2903L13.4001 12.7103Z" fill="#050505"/>
                 </svg>
-            </button>`),n.querySelectorAll("[data-topage]").forEach(e=>{/* console.log(btn.dataset.topage); */e.addEventListener("click",function(e){e.preventDefault(),P.setPage(Number(e.target.dataset.topage)),i()})})}else n.innerHTML=""})(t.page,t.totalPages,n,Q),console.log(t)})}//# sourceMappingURL=index.dbc2865a.js.map
-
-//# sourceMappingURL=index.dbc2865a.js.map
+            </button>`),n.querySelectorAll("[data-topage]").forEach(e=>{/* console.log(btn.dataset.topage); */e.addEventListener("click",function(e){e.preventDefault(),P.setPage(Number(e.target.dataset.topage)),i()})})}else n.innerHTML=""}//# sourceMappingURL=index.b66d2516.js.map
+)(t.page,t.totalPages,n,Q),console.log(t)})}
+//# sourceMappingURL=index.b66d2516.js.map
