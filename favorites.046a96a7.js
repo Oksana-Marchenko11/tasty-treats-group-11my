@@ -1,4 +1,5 @@
-var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={},n={},a=e.parcelRequire78be;null==a&&((a=function(e){if(e in t)return t[e].exports;if(e in n){var a=n[e];delete n[e];var i={id:e,exports:{}};return t[e]=i,a.call(i.exports,i,i.exports),i.exports}var r=Error("Cannot find module '"+e+"'");throw r.code="MODULE_NOT_FOUND",r}).register=function(e,t){n[e]=t},e.parcelRequire78be=a);var i={},r="Expected a function",o=0/0,l=/^\s+|\s+$/g,c=/^[-+]0x[0-9a-f]+$/i,s=/^0b[01]+$/i,d=/^0o[0-7]+$/i,u=parseInt,p="object"==typeof e&&e&&e.Object===Object&&e,g="object"==typeof self&&self&&self.Object===Object&&self,f=p||g||Function("return this")(),b=Object.prototype.toString,m=Math.max,v=Math.min,y=function(){return f.Date.now()};/**
+var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},t={},n={},a=e.parcelRequire78be;null==a&&((a=function(e){if(e in t)return t[e].exports;if(e in n){var a=n[e];delete n[e];var i={id:e,exports:{}};return t[e]=i,a.call(i.exports,i,i.exports),i.exports}var r=Error("Cannot find module '"+e+"'");throw r.code="MODULE_NOT_FOUND",r}).register=function(e,t){n[e]=t},e.parcelRequire78be=a);// Оновлений JavaScript зі скролом
+var i={},r="Expected a function",o=0/0,l=/^\s+|\s+$/g,c=/^[-+]0x[0-9a-f]+$/i,s=/^0b[01]+$/i,d=/^0o[0-7]+$/i,u=parseInt,p="object"==typeof e&&e&&e.Object===Object&&e,g="object"==typeof self&&self&&self.Object===Object&&self,f=p||g||Function("return this")(),b=Object.prototype.toString,m=Math.max,v=Math.min,y=function(){return f.Date.now()};/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -44,7 +45,7 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  *
  * _.toNumber('3.2');
  * // => 3.2
- */function w(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==b.call(t))return o;if(h(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=h(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var a=s.test(e);return a||d.test(e)?u(e.slice(2),a?2:8):c.test(e)?o:+e}i=/**
+ */function L(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==b.call(t))return o;if(h(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=h(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(l,"");var a=s.test(e);return a||d.test(e)?u(e.slice(2),a?2:8):c.test(e)?o:+e}i=/**
  * Creates a throttled function that only invokes `func` at most once per
  * every `wait` milliseconds. The throttled function comes with a `cancel`
  * method to cancel delayed `func` invocations and a `flush` method to
@@ -143,13 +144,13 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
  */function(e,t,n){var a,i,o,l,c,s,d=0,u=!1,p=!1,g=!0;if("function"!=typeof e)throw TypeError(r);function f(t){var n=a,r=i;return a=i=void 0,d=t,l=e.apply(r,n)}function b(e){var n=e-s,a=e-d;// Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===s||n>=t||n<0||p&&a>=o}function T(){var e,n,a,i=y();if(b(i))return $(i);// Restart the timer.
-c=setTimeout(T,(e=i-s,n=i-d,a=t-e,p?v(a,o-n):a))}function $(e){return(// Only invoke if we have `lastArgs` which means `func` has been
+return void 0===s||n>=t||n<0||p&&a>=o}function w(){var e,n,a,i=y();if(b(i))return T(i);// Restart the timer.
+c=setTimeout(w,(e=i-s,n=i-d,a=t-e,p?v(a,o-n):a))}function T(e){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(c=void 0,g&&a)?f(e):(a=i=void 0,l))}function M(){var e,n=y(),r=b(n);if(a=arguments,i=this,s=n,r){if(void 0===c)return(// Reset any `maxWait` timer.
+(c=void 0,g&&a)?f(e):(a=i=void 0,l))}function $(){var e,n=y(),r=b(n);if(a=arguments,i=this,s=n,r){if(void 0===c)return(// Reset any `maxWait` timer.
 d=e=s,// Start the timer for the trailing edge.
-c=setTimeout(T,t),u?f(e):l);if(p)return(// Handle invocations in a tight loop.
-c=setTimeout(T,t),f(s))}return void 0===c&&(c=setTimeout(T,t)),l}return t=w(t)||0,h(n)&&(u=!!n.leading,o=(p="maxWait"in n)?m(w(n.maxWait)||0,t):o,g="trailing"in n?!!n.trailing:g),M.cancel=function(){void 0!==c&&clearTimeout(c),d=0,a=s=i=c=void 0},M.flush=function(){return void 0===c?l:$(y())},M}(e,t,{leading:a,maxWait:t,trailing:i})};const T=document.querySelector(".category-list-favorites"),$=document.querySelector(".favorites-list"),M=document.querySelector("#pagination"),L=document.querySelector(".favorites-text");let E=[],x=0,H=3,C="";window.onresize=i(function(){j()},500);const S=`
+c=setTimeout(w,t),u?f(e):l);if(p)return(// Handle invocations in a tight loop.
+c=setTimeout(w,t),f(s))}return void 0===c&&(c=setTimeout(w,t)),l}return t=L(t)||0,h(n)&&(u=!!n.leading,o=(p="maxWait"in n)?m(L(n.maxWait)||0,t):o,g="trailing"in n?!!n.trailing:g),$.cancel=function(){void 0!==c&&clearTimeout(c),d=0,a=s=i=c=void 0},$.flush=function(){return void 0===c?l:T(y())},$}(e,t,{leading:a,maxWait:t,trailing:i})};const w=document.querySelector(".category-list-favorites"),T=document.querySelector(".favorites-list"),$=document.querySelector("#pagination"),M=document.querySelector(".favorites-wrap"),E=document.querySelector(".categories-box-favorites");let x=[],H=0,C="";window.onresize=i(function(){q()},500);const S=`
 <svg width="22" height="22" viewBox="0 0 22 22" fill="white" xmlns="http://www.w3.org/2000/svg">
     <path opacity="1" fill-rule="evenodd" clip-rule="evenodd"
         d="M10.9939 4.70783C9.16115 2.5652 6.10493 1.98884 3.80863 3.95085C1.51234
@@ -161,22 +162,21 @@ c=setTimeout(T,t),f(s))}return void 0===c&&(c=setTimeout(T,t)),l}return t=w(t)||
         2.00948 12.8266 2.5652 10.9939 4.70783Z" stroke="#F8F8F8" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round"/>
 </svg>`;// functions
-function j(e){e||=1,e=Number(e);let t=a("2JNBJ").default,n=t.getLs(),i=[];E=[],x=0,H=window.innerWidth<768?2:3;let r=0;Object.keys(n).forEach(e=>{let t=n[e];//console.log(id, recipe);
-x++,E.includes(t.category)||E.push(t.category)}),C=E.includes(C)?C:"",Object.keys(n).forEach(t=>{let a=n[t],o=1===e?0:(e-1)*H,l=1===e?H:e*H;if((C&&a.category===C||!C)&&(r++,i.length<H&&r>o&&r<=l)){let e=document.createElement("li");e.className="item-cards",e.innerHTML=`
-                    <div class="shadow-on-img" data-recipe-id="${a._id}">
-                        <img class="card-img" src="${a.preview}" />
+function q(e){let t;e||=1,e=Number(e);let n=a("2JNBJ").default,i=n.getLs(),r=[];x=[],H=0,t=12,window.innerWidth<768&&(t=9),perPageLimit=t;let o=0;Object.keys(i).forEach(e=>{let t=i[e];H++,x.includes(t.category)||x.push(t.category)}),C=x.includes(C)?C:"",Object.keys(i).forEach(t=>{let n=i[t],a=1===e?0:(e-1)*perPageLimit,l=1===e?perPageLimit:e*perPageLimit;if((C&&n.category===C||!C)&&(o++,r.length<perPageLimit&&o>a&&o<=l)){let e=document.createElement("li");e.className="item-cards",e.innerHTML=`
+                    <div class="shadow-on-img" data-recipe-id="${n._id}">
+                        <img class="card-img" src="${n.preview}" />
                     </div>
                     <button class="add-fav-btn"
-                            data-recipe-id="${a._id}">
+                            data-recipe-id="${n._id}">
                         ${S}
                     </button>
-                    <span class="span-title" data-recipe-id="${a._id}">
-                        ${a.title.toUpperCase()}
+                    <span class="span-title" data-recipe-id="${n._id}">
+                        ${n.title.toUpperCase()}
                     </span>
-                    <span class="span-descr" data-recipe-id="${a._id}">
-                        ${a.description}
+                    <span class="span-descr" data-recipe-id="${n._id}">
+                        ${n.description}
                     </span>
-                    <button class="main-see-recipe" data-recipe-id="${a._id}">
+                    <button class="main-see-recipe" data-recipe-id="${n._id}">
                         See recipe
                     </button>
                 `,e.appendChild(function(e){let t=`
@@ -189,15 +189,19 @@ x++,E.includes(t.category)||E.push(t.category)}),C=E.includes(C)?C:"",Object.key
                 <svg class="star" viewBox="0 0 34 32" data-rating="${n}" width="16" height="16">
                     ${t}
                 </svg>            
-            `,i.appendChild(a)}return n.appendChild(i),n}(a.rating)),$.appendChild(e)}});let o=E.sort().map(e=>`<li class="favourites-list-btn"><button class="category-btn" data-recipe-category="${e}">${e}</button></li>`).join("");T.innerHTML=o,T.querySelectorAll(".category-btn").forEach(e=>{e.addEventListener("click",e=>{C=e.target.dataset.recipeCategory,console.log(e.target.dataset.recipeCategory),// renew favors
-j()})}),document.querySelector(".all-tags").addEventListener("click",()=>{console.log("categories reset",C=""),// renew favors
-j()}),$.querySelectorAll(".item-cards").length?($.querySelectorAll(".add-fav-btn").forEach(n=>{n.addEventListener("click",function(n){n.preventDefault(),t.togleFav(n.target.dataset.recipeId),// console.log(res);
-j(e);// if (res) togle class  'favorite' : 'unfavorite'
-})}),$.querySelectorAll(".main-see-recipe").forEach(e=>{let t=a("6o7gM");e.addEventListener("click",e=>{console.log(e.target.dataset),t.default.open(e.target.dataset.recipeId)})}),r>H?// pagination
+            `,i.appendChild(a)}return n.appendChild(i),n}(n.rating)),T.appendChild(e)}}),// Викликаємо функцію для створення кнопок
+function(){let e=x.sort().map(e=>`<li class="favourites-list-btn"><button class="category-btn all-tags" data-recipe-category="${e}">${e}</button></li>`).join("");w.innerHTML=e,w.querySelectorAll(".category-btn").forEach(e=>{e.addEventListener("click",e=>{C=e.target.dataset.recipeCategory,console.log(e.target.dataset.recipeCategory),// Оновлюємо вподобані рецепти
+q()})}),document.querySelector(".all-tags").addEventListener("click",()=>{console.log("categories reset",C=""),// Оновлюємо вподобані рецепти
+q()})}(),// Додаємо обробник подій для скролу (змінений для підтримки мобільних пристроїв)
+E.addEventListener("scroll",e=>{E.scrollLeft;// Отримуємо ширину контейнера і вираховуємо, чи потрібно показувати горизонтальний скрол
+let t=E.clientWidth,n=E.scrollWidth;n<=t?E.style.overflowX="hidden":E.style.overflowX="scroll";// Опрацьовуємо подію при прокручуванні
+// Ви можете додати необхідний код тут, якщо потрібно
+}),T.querySelectorAll(".item-cards").length?(T.querySelectorAll(".add-fav-btn").forEach(t=>{t.addEventListener("click",function(t){t.preventDefault(),n.togleFav(t.target.dataset.recipeId),q(e);// if (res) togle class  'favorite' : 'unfavorite'
+})}),T.querySelectorAll(".main-see-recipe").forEach(e=>{let t=a("6o7gM");e.addEventListener("click",e=>{console.log(e.target.dataset),t.default.open(e.target.dataset.recipeId)})}),o>perPageLimit?// pagination
 function(e,t,n,a){e=Number(e),t=Number(t);let i=window.innerWidth<768?2:3;if(console.log(e,t),t>1){n.innerHTML="",1===e?(// inactive prev b
 n.innerHTML+='<button class="main-pag-btn" disabled><<</button>',n.innerHTML+='<button class="main-pag-btn" disabled><</button>'):(// active prev b
 n.innerHTML+='<button class="main-pag-btn main-pag-btn-green" data-topage="1"><<</button>',n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green" data-topage="${e-1}"><</button>`);for(let a=e-i;a<=e+i;a++)a>0&&a<=t&&(a===e?n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green active"  data-topage="${a}">${a}</button>`:a===e+i||a===e-i?n.innerHTML+=`<button class="main-pag-btn" data-topage="${a}">...</button>`:n.innerHTML+=`<button class="main-pag-btn" data-topage="${a}">${a}</button>`);e===t?(// inactive forward b
 n.innerHTML+='<button class="main-pag-btn" disabled>></button>',n.innerHTML+='<button class="main-pag-btn" disabled>>></button>'):(// active forward b
-n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green" data-topage="${e+1}">></button>`,n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green" data-topage="${t}">>></button>`),n.querySelectorAll("[data-topage]").forEach(e=>{/* console.log(btn.dataset.topage) */e.addEventListener("click",function(e){e.preventDefault(),a(Number(e.target.dataset.topage))})})}}//# sourceMappingURL=favorites.2cf7a09d.js.map
-(e,Math.ceil(r/H),M,j):M.innerHTML="",L.style.display="none",document.querySelector(".favorites-tags").style.display="flex"):(L.style.display="flex",document.querySelector(".favorites-tags").style.display="none")}j();
-//# sourceMappingURL=favorites.2cf7a09d.js.map
+n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green" data-topage="${e+1}">></button>`,n.innerHTML+=`<button class="main-pag-btn main-pag-btn-green" data-topage="${t}">>></button>`),n.querySelectorAll("[data-topage]").forEach(e=>{e.addEventListener("click",function(e){e.preventDefault(),a(Number(e.target.dataset.topage))})})}}//# sourceMappingURL=favorites.046a96a7.js.map
+(e,Math.ceil(o/perPageLimit),$,q):$.innerHTML="",M.style.display="none",document.querySelector(".favorites-tags").style.display="flex"):(M.style.display="flex",document.querySelector(".favorites-tags").style.display="none")}q();
+//# sourceMappingURL=favorites.046a96a7.js.map
