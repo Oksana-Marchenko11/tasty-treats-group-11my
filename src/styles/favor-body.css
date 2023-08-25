@@ -6,6 +6,30 @@
     height: calc(100vh - 30px);
 }
 
+.fav-pic {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.fav-hero-mob {
+    height: 516px;
+    width: 335px;
+    flex-shrink: 0;
+}
+
+.fav-hero-tab {
+    width: 704px;
+    height: 356px;
+    flex-shrink: 0;
+}
+
+.fav-hero-desc {
+    width: 1080px;
+    height: 356px;
+    flex-shrink: 0;
+}
+
 .fav-icon {
     width: 68px;
     height: 58px;
@@ -156,6 +180,18 @@ ul.favourites-list-btn {
         justify-content: flex-start;
         bottom: 3%;
     }
+
+    .fav-hero-mob {
+        display: flex;
+    }
+
+    .fav-hero-tab {
+        display: none;
+    }
+
+    .fav-hero-desc {
+        display: none;
+    }
 }
 
 /* ================450px============== */
@@ -184,6 +220,19 @@ ul.favourites-list-btn {
     .tags-container {
         margin-bottom: 32px;
     }
+
+    .fav-hero-mob {
+        display: none;
+    }
+
+    .fav-hero-tab {
+        display: flex;
+    }
+
+    .fav-hero-desc {
+        display: none;
+    }
+
 }
 
 /* ================1158px============== */
@@ -191,4 +240,17 @@ ul.favourites-list-btn {
     .page-change-favourite-list {
         left: 50%;
     }
+
+    .fav-hero-mob {
+        display: none;
+    }
+
+    .fav-hero-tab {
+        display: none;
+    }
+
+    .fav-hero-desc {
+        display: flex;
+    }
 }
+
