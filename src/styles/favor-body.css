@@ -186,6 +186,10 @@ ul.favourites-list-btn {
         bottom: 3%;
     }
 
+    .favorites-text {
+        width: 310px;
+    }
+
     .fav-hero-mob {
         display: flex;
     }
@@ -204,6 +208,10 @@ ul.favourites-list-btn {
 @media screen and (min-width: 450px) {
     .page-change-favourite-list {
         justify-content: center;
+    }
+
+    .favorites-text {
+        width: 440px;
     }
 }
 
